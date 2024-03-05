@@ -30,6 +30,11 @@ class Usuario implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?string $password = null;
 
+    public function __construct(string $nip)
+    {
+        $this->nip = $nip;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -38,13 +43,6 @@ class Usuario implements UserInterface, PasswordAuthenticatedUserInterface
     public function getNip(): ?string
     {
         return $this->nip;
-    }
-
-    public function setNip(string $nip): static
-    {
-        $this->nip = $nip;
-
-        return $this;
     }
 
     /**
