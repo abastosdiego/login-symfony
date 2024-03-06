@@ -41,24 +41,24 @@ class ApiLoginController extends AbstractController
         ]);
     }
 
-    #[Route('/api/login', name: 'api_login', methods: ['POST'])]
-    public function login(#[CurrentUser] ?Usuario $user): Response
-    {
-        if (null === $user) {
-            return $this->json([
-                'message' => 'missing credentials',
-            ], Response::HTTP_UNAUTHORIZED);
-        }
+    // #[Route('/api/login', name: 'api_login', methods: ['POST'])]
+    // public function login(#[CurrentUser] ?Usuario $user): Response
+    // {
+    //     if (null === $user) {
+    //         return $this->json([
+    //             'message' => 'missing credentials',
+    //         ], Response::HTTP_UNAUTHORIZED);
+    //     }
 
-        //$token = ...; // somehow create an API token for $user
+    //     //$token = ...; // somehow create an API token for $user
         
-        $token = '';
+    //     $token = '';
 
-        return $this->json([
-            'user'  => $user->getUserIdentifier(),
-            'token' => $token,
-        ]);
-    }
+    //     return $this->json([
+    //         'user'  => $user->getUserIdentifier(),
+    //         'token' => $token,
+    //     ]);
+    // }
 
 
 }

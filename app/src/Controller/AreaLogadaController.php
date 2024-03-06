@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class AreaLogadaController extends AbstractController
 {
-    #[Route('/area-logada', name: 'app_area_logada')]
+    #[Route('/api/area-logada', name: 'app_area_logada', methods: ['GET'])]
     public function index(): JsonResponse
     {
         return $this->json([
