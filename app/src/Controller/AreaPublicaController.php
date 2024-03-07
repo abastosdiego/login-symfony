@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class AreaPublicaController extends AbstractController
 {
-    #[Route('/area-publica', name: 'app_area_publica')]
+    #[Route('/api/area-publica', name: 'app_area_publica')]
     public function index(): JsonResponse
     {
         return $this->json([
